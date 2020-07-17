@@ -2,12 +2,13 @@ package com.example.basicdaggertutorial
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import javax.inject.Inject
 
 /**
  * ViewModelProvider.Factory: pass objects in a ViewModel’s constructor.
  */
 @Suppress("UNCHECKED_CAST")
-class MainViewModelFactory(private val api: Api) : ViewModelProvider.Factory {
+class MainViewModelFactory @Inject constructor (private val api: Api) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
