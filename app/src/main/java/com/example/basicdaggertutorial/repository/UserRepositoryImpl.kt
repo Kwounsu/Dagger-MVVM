@@ -1,8 +1,11 @@
-package com.example.basicdaggertutorial
+package com.example.basicdaggertutorial.repository
 
+import com.example.basicdaggertutorial.Api
+import com.example.basicdaggertutorial.User
 import retrofit2.*
 
-class UserRepositoryImpl(private val api: Api) : UserRepository {
+class UserRepositoryImpl(private val api: Api) :
+    UserRepository {
 
     override fun getUser(username: String, onSuccess: (user: User) -> Unit, onFailure: (t: Throwable) -> Unit) {
         api.getUser(username).enqueue(object : Callback<User> {

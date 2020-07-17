@@ -2,19 +2,13 @@ package com.example.basicdaggertutorial
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import com.example.basicdaggertutorial.viewmodel.MainViewModel
+import com.example.basicdaggertutorial.viewmodel.MainViewModelFactory
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {

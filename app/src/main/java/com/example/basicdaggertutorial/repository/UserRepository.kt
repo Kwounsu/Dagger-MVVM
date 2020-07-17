@@ -1,4 +1,6 @@
-package com.example.basicdaggertutorial
+package com.example.basicdaggertutorial.repository
+
+import com.example.basicdaggertutorial.User
 
 interface UserRepository {
 
